@@ -12,10 +12,10 @@ let palabraConGuiones = palabra.replace(/./g,"_ ");
 let contadorFallos=0;
 //<p> id output sera reemplazado por "palabraConGuiones"
 document.querySelector('#output').innerHTML = palabraConGuiones;
-document.querySelector('#calcular').addEventListener('click',()=>{
+button.addEventListener('click',()=>{
     //obtener el valor de la letra ingresada en id letra y guardarlo en la const letra.
-    const letra=document.querySelector('#letra').value;
-
+    let letra=document.querySelector('#letra').value;
+    letra=letra.toLowerCase();
     let haFallado=true;
     for(const i in palabra){
         //si encuentra la letra, reemplazara el guión+espacio por la letra que encontro en el espacio en que lo encontro.
